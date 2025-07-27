@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --color-text-title: #5b5b5b;
+  --color-text-item: #939393;
+  --color-text-hover: #333333;
+  --color-text-active: #007bff;
+  --color-text-disabled: #cccccc;
+
+  --color-bg-sidebar: #f8f9fa;
+  --color-border: #e0e0e0;
+}
+
+@font-face {
+  font-family: 'Urbanist-Regular';
+  src: url('./assets/fonts/Urbanist-Regular.ttf') format('truetype');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Urbanist-Regular', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
