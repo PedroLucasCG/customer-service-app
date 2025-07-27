@@ -31,3 +31,7 @@ body {
 .hidden {
     display: none;
 }
+
+.icon{
+    filter: brightness(0) saturate(100%) invert(11%) sepia(52%) saturate(6004%) hue-rotate(352deg) brightness(122%) contrast(85%);
+}

@@ -1,54 +1,31 @@
-# React + TypeScript + Vite
+# 🛎️ Customer Service Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web-based customer service dashboard designed to help agents and support teams manage live chats and monitor website visitors in real-time.
 
-Currently, two official plugins are available:
+## 📌 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎧 Live Chat Panel for ongoing conversations
+- 🌍 Real-time Visitor Tracking
+- 👥 Agent-side Menu (Chats, Visitors, Logout)
+- 🚪 Fixed Logout button at bottom
+- 🎨 Responsive Sidebar with Logo and Retract Option
+- 🟥 Brand Colors: Deep Red (`#B22222`)
+- ✨ Minimalist and intuitive UI
+- 📱 Mobile-friendly layout (planned)
 
-## Expanding the ESLint configuration
+## 🧱 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **HTML / CSS**
+- **JavaScript (Vanilla or Framework of your choice)**
+- Optional: React / Vue / Svelte integration
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📁 Project Structure
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+```bash
+customer-service-dashboard/
+├── assets/                 # Icons, logos
+├── css/                   # Stylesheets
+│   └── style.css
+├── js/                    # Behavior scripts
+├── index.html             # Main UI
+├── README.md              # This file
