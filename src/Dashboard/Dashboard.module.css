@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    position: relative;
 }
 
 .submenu {
@@ -12,6 +13,9 @@
 .aside {
     padding: 1rem 6rem 0 1.5rem;
     height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
     box-shadow: lightgray 1px 1px 1px;
     width: fit-content;
     position: relative;
@@ -53,17 +57,17 @@
     letter-spacing: .2rem;
 }
 
-.ul {
+.aside .ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: 83%;
+    height: 80%;
     color: var(--color-text-item);
 }
 
-.ul li {
+.aside .ul li {
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -72,7 +76,7 @@
     margin: .5rem 0;
 }
 
-.ul li:last-of-type {
+.aside .ul li:last-of-type {
     margin-top: auto;
 }
 
@@ -87,7 +91,23 @@
     align-items: center;
     justify-content: left;
     gap: 5px;
-    margin: .5rem 0
+    margin: .5rem 0;
+    cursor: pointer;
+}
+
+.submenu .ul li {
+    padding: 5px;
+    border-radius: .5rem;
+}
+
+.submenu .ul li:hover {
+    background-color: #db7676;
+    opacity: .8;
+    color: white;
+}
+
+.submenu .ul li:hover img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(0%) hue-rotate(272deg) brightness(106%) contrast(103%);
 }
 
 .ul li img {
@@ -118,4 +138,49 @@
 .main {
     width: 100%;
     background-color: #f2f2f2;
+    overflow-y: auto;
+    max-height: 100svh;
+    overflow-x: hidden;
+}
+
+.closeMobile {
+    display: none;
+}
+
+@media screen and (max-width: 1025px) {
+    .aside .ul {
+        height: 75%;
+    }
+
+    .aside {
+        background-color: var(--color-bg-sidebar);
+        position: fixed;
+        z-index: 2;
+    }
+
+    .submenu {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 3rem;
+        z-index: 3;
+        box-shadow: lightgray 1px 1px 1px;
+        padding: 1rem;
+        padding-right: 0rem;
+        min-width: 0ch;
+    }
+
+    .closeMobile {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 8;
+    }
+
+    .retractButton {
+        height: 2rem;
+        font-size: 1.5em;
+    }
 }

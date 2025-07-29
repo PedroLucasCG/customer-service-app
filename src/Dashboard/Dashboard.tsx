@@ -34,7 +34,6 @@ export default function SideBar() {
         const label = (event.currentTarget.querySelector("span")?.innerText || "").toLowerCase();
         switch (label) {
             case "chats":
-                console.log(1);
                 setActiveSubmenu(<SubMenuChatsContent fn={ switchContent } />);
                 break;
             case "visitantes":
@@ -48,6 +47,10 @@ export default function SideBar() {
         }
         setIsOpen(true);
     }
+
+    const closeSubmenu = () => {
+        setIsOpen(false);
+    };
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -90,6 +93,9 @@ export default function SideBar() {
             </ul>
         </aside>
         <div ref={ submenuRef } className={ `${ styles.submenu } ${ isOpen ? "" : "hidden" }` }>
+            <div className={ styles.closeMobile } id='close' onClick={ closeSubmenu }>
+                <SvgIcon iconName='close'/>
+            </div>
             { activeSubmenu }
         </div>
         <main className={ styles.main }>

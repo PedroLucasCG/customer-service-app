@@ -1,87 +1,131 @@
 .main {
-    padding: .5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.main div{
-    padding: 1rem .5rem;
-    width: 100%;
-    border-radius: .5rem;
+/* === Children of .main === */
+
+.main div {
+  padding: 1rem 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
 }
+
+/* === First Section === */
 
 .main div:first-of-type {
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: .6rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
-.main div:first-of-type h1{
-    font-size: 24px;
+.main div:first-of-type h1 {
+  font-size: 24px;
 }
 
-.main div:first-of-type h2{
-    font-size: 16px;
-    color: var(--color-text-title)
+.main div:first-of-type h2 {
+  font-size: 16px;
+  color: var(--color-text-title);
 }
+
+/* === Second Section === */
 
 .main div:nth-of-type(2) {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem;
-    flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.main div:nth-of-type(2) > div {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main div:nth-of-type(2) h2 {
+  font-size: 24px;
+  color: var(--color-text-title);
 }
 
 .main div:nth-of-type(2) p,
 .main div:nth-of-type(2) span,
 .main div:nth-of-type(3) p {
-    display: flex;
-    gap: 5px;
-    align-items: center;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
-.main div:nth-of-type(2) h2 {
-    font-size: 24px;
-    color: var(--color-text-title)
-}
-
-.main div:nth-of-type(2) > div {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
+/* === Third Section === */
 
 .main div:nth-of-type(3) {
-    background-color: white;
+  background-color: white;
 }
 
 .main div:nth-of-type(3) > div {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-.details > div {
-    display: flex;
-    color: var(--color-text-title);
-    flex-direction: column;
-    gap: 1rem;
+.main div:nth-of-type(3) > div h3 {
+    padding-left: 1rem;
 }
+
+/* === Details Section === */
+
+.details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--color-text-title);
+}
+
+/* === Progress Bar === */
 
 .bar,
 .fill {
-    display: block;
-    background-color: #ddd;
-    height: 10px;
-    width: 100%;
-    border-radius: 5rem;
+  display: block;
+  width: 100%;
+  height: 10px;
+  border-radius: 5rem;
+  background-color: #ddd;
 }
 
 .fill {
-    background-color: #B22222;
+  background-color: #B22222;
+}
+
+
+@media screen and (max-width: 767px) {
+    .main div:nth-of-type(3) > div {
+        flex-wrap: wrap;
+    }
+
+    .details > div {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main div:nth-of-type(2) {
+        flex-direction: column;
+    }
+
+    .main div:nth-of-type(2) p {
+        justify-content: space-between;
+    }
+
+    .main {
+        padding-left: 6rem;
+    }
+
+    .main > div:nth-of-type(3) {
+        width: 90%;
+    }
 }

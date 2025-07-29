@@ -7,6 +7,7 @@ import done from '../assets/icons/done.svg';
 import up from '../assets/icons/up.svg';
 import bubble from '../assets/icons/bubble.svg';
 import clock from '../assets/icons/clock.svg';
+import close from '../assets/icons/close.svg';
 
 const icons ={
     chat,
@@ -18,6 +19,7 @@ const icons ={
     up,
     bubble,
     clock,
+    close,
 };
 
 interface SvgIconProps {
